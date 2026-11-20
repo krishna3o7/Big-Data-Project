@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Traffic Accident Data Processing | Apache Pig</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:#f4f7fb;color:#172033}
+header{background:linear-gradient(135deg,#101828,#1d4ed8);color:white;padding:28px 6vw}
+header h1{margin:0;font-size:30px}header p{margin:8px 0 0;opacity:.88}
+nav{background:white;padding:14px 6vw;display:flex;gap:18px;position:sticky;top:0;z-index:3;box-shadow:0 2px 10px #00000012}
+nav a{text-decoration:none;color:#344054;font-weight:600}
+main{max-width:1200px;margin:28px auto;padding:0 20px}
+.hero{background:white;border-radius:18px;padding:28px;box-shadow:0 8px 30px #10182812}
+.hero h2{margin-top:0}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+button,.upload{border:0;border-radius:10px;padding:11px 16px;font-weight:700;cursor:pointer;background:#1d4ed8;color:white}
+button.secondary{background:#eef2ff;color:#1d4ed8}.upload input{display:none}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:20px 0}
+.card{background:white;border-radius:16px;padding:20px;box-shadow:0 6px 24px #1018280d}
+.card small{color:#667085}.card strong{display:block;font-size:28px;margin-top:6px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.section{background:white;border-radius:16px;padding:22px;box-shadow:0 6px 24px #1018280d}
+.section h3{margin-top:0}
+canvas{width:100%;height:280px;border:1px solid #eef2f6;border-radius:10px}
+table{width:100%;border-collapse:collapse;margin-top:12px}th,td{padding:10px;border-bottom:1px solid #eee;text-align:left}th{background:#f8fafc}
+.flow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.step{background:#eef4ff;color:#174ea6;padding:12px 14px;border-radius:10px;font-weight:700}
+.arrow{color:#98a2b3;font-weight:800}
+footer{text-align:center;padding:30px;color:#667085}
+@media(max-width:800px){.stats{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}}
+@media(max-width:500px){.stats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+<h1>Traffic Accident Data Processing</h1>
+<p>Apache Pig • Big Data Analytics • Interactive Project Dashboard</p>
+</header>
+<nav>
+<a href="#dashboard">Dashboard</a><a href="#analysis">Analysis</a><a href="#workflow">Workflow</a><a href="#data">Dataset</a>
+</nav>
+<main>
+<section class="hero" id="dashboard">
+<h2>Traffic Accident Analytics Dashboard</h2>
+<p>Upload a CSV traffic-accident dataset to calculate accident summaries by severity, weather, location and road condition. The interface also includes the Apache Pig processing workflow used in the project.</p>
+<div class="buttons">
+<label class="upload">Upload CSV <input id="fileInput" type="file" accept=".csv"></label>
+<button class="secondary" onclick="loadDemo()">Load Demo Data</button>
+<button class="secondary" onclick="downloadPig()">Download Pig Script</button>
+</div>
+<p id="status" style="margin-bottom:0;color:#667085">Using the built-in demonstration dataset.</p>
+</section>
+
+<section class="stats" id="stats">
+<div class="card"><small>Total Accidents</small><strong id="total">60</strong></div>
+<div class="card"><small>Total Vehicles</small><strong id="vehicles">0</strong></div>
+<div class="card"><small>Total Casualties</small><strong id="casualties">0</strong></div>
+<div class="card"><small>Data Records</small><strong id="records">60</strong></div>
+</section>
+
+<section class="grid" id="analysis">
+<div class="section"><h3>Accidents by Severity</h3><canvas id="severityChart"></canvas></div>
+<div class="section"><h3>Accidents by Weather</h3><canvas id="weatherChart"></canvas></div>
+<div class="section"><h3>Accidents by Location</h3><canvas id="locationChart"></canvas></div>
+<div class="section"><h3>Accidents by Road Condition</h3><canvas id="roadChart"></canvas></div>
+</section>
+
+<section class="section" id="workflow" style="margin-top:20px">
+<h3>Apache Pig Processing Workflow</h3>
+<div class="flow">
+<div class="step">CSV Input</div><span class="arrow">→</span>
+<div class="step">LOAD</div><span class="arrow">→</span>
+<div class="step">CLEAN</div><span class="arrow">→</span>
+<div class="step">FILTER</div><span class="arrow">→</span>
+<div class="step">GROUP</div><span class="arrow">→</span>
+<div class="step">COUNT / AGGREGATE</div><span class="arrow">→</span>
+<div class="step">ORDER</div><span class="arrow">→</span>
+<div class="step">STORE</div>
+</div>
+<p>This follows the project report's batch-processing architecture for Apache Pig.</p>
+</section>
+
+<section class="section" id="data" style="margin-top:20px">
+<h3>Dataset Preview</h3>
+<div style="overflow:auto"><table><thead id="thead"></thead><tbody id="tbody"></tbody></table></div>
+</section>
+</main>
+<footer>Traffic Accident Data Processing Using Apache Pig • CSE – Data Science</footer>
+
+<script>
+let data=[];
+const demo=[
+["A0001","2026-01-05","08:30","Fatal","Highways","Rain","Wet",3,2],
+["A0002","2026-01-08","14:10","Serious","Urban roads","Clear","Dry",2,1],
+["A0003","2026-01-11","21:45","Minor","Urban roads","Clear","Normal",2,0],
+["A0004","2026-02-03","06:20","Serious","Rural roads","Fog/Mist","Wet",4,2],
+["A0005","2026-02-17","18:15","Minor","Urban roads","Rain","Wet",2,1],
+["A0006","2026-03-02","23:05","Fatal","Highways","Clear","Dry",5,4],
+["A0007","2026-03-14","10:40","Other","Other","Other/Unknown","Damaged",1,0],
+["A0008","2026-04-01","16:30","Serious","Rural roads","Rain","Wet",3,2],
+["A0009","2026-04-19","07:55","Minor","Urban roads","Clear","Normal",2,0],
+["A0010","2026-05-06","19:20","Fatal","Highways","Fog/Mist","Wet",4,3]
+];
+function expandDemo(){let out=[];for(let i=0;i<60;i++){let r=demo[i%demo.length].slice();r[0]="A"+String(i+1).padStart(4,"0");out.push(r)}return out}
+data=expandDemo();
+
+function csvParse(t){let lines=t.trim().split(/\r?\n/).filter(Boolean);return lines.slice(1).map(line=>{
+let a=[],cur="",q=false;for(let c of line){if(c=='"')q=!q;else if(c==","&&!q){a.push(cur.trim());cur=""}else cur+=c}a.push(cur.trim());return a;
+}).filter(r=>r.length>=9)}
+function setData(d,msg){data=d;document.getElementById("status").textContent=msg;update()}
+document.getElementById("fileInput").addEventListener("change",e=>{
+const f=e.target.files[0];if(!f)return;const rd=new FileReader();rd.onload=()=>setData(csvParse(rd.result),`Loaded ${f.name} — ${data.length} records.`);rd.readAsText(f)
+});
+function loadDemo(){setData(expandDemo(),"Using the built-in demonstration dataset.")}
+function countAt(i){let m={};data.forEach(r=>{let k=r[i]||"Unknown";m[k]=(m[k]||0)+1});return Object.entries(m).sort((a,b)=>b[1]-a[1])}
+function sumAt(i){return data.reduce((s,r)=>s+(Number(r[i])||0),0)}
+function update(){
+document.getElementById("total").textContent=data.length;
+document.getElementById("records").textContent=data.length;
+document.getElementById("vehicles").textContent=sumAt(7);
+document.getElementById("casualties").textContent=sumAt(8);
+draw("severityChart",countAt(3));draw("weatherChart",countAt(5));draw("locationChart",countAt(4));draw("roadChart",countAt(6));renderTable();
+}
+function draw(id,items){
+let c=document.getElementById(id),ctx=c.getContext("2d"),w=c.width=c.clientWidth*2,h=c.height=280*2;ctx.clearRect(0,0,w,h);
+let max=Math.max(...items.map(x=>x[1]),1), barW=w/items.length*.62;
+ctx.font="24px Segoe UI";items.forEach((x,i)=>{let x0=i*w/items.length+w/items.length*.19;let bh=(x[1]/max)*(h-70);ctx.fillStyle="#2563eb";ctx.fillRect(x0,h-45-bh,barW,bh);ctx.fillStyle="#172033";ctx.textAlign="center";ctx.fillText(String(x[1]),x0+barW/2,h-55-bh);let label=x[0].length>13?x[0].slice(0,12)+"…":x[0];ctx.fillText(label,x0+barW/2,h-12)})}
+function renderTable(){let head=["ID","Date","Time","Severity","Location","Weather","Road","Vehicles","Casualties"];document.getElementById("thead").innerHTML="<tr>"+head.map(x=>`<th>${x}</th>`).join("")+"</tr>";document.getElementById("tbody").innerHTML=data.slice(0,12).map(r=>"<tr>"+r.map(x=>`<td>${x}</td>`).join("")+"</tr>").join("")}
+function downloadPig(){
+const pig=`accidents = LOAD 'traffic_accidents.csv' USING PigStorage(',') AS (id:chararray,date:chararray,time:chararray,severity:chararray,location:chararray,weather:chararray,road:chararray,vehicles:int,casualties:int);
+clean = FILTER accidents BY id != 'id' AND id IS NOT NULL AND severity IS NOT NULL;
+severity_group = GROUP clean BY severity;
+severity_count = FOREACH severity_group GENERATE group AS severity, COUNT(clean) AS accident_count;
+ordered = ORDER severity_count BY accident_count DESC;
+STORE ordered INTO 'output/severity_summary' USING PigStorage(',');
+weather_group = GROUP clean BY weather;
+weather_count = FOREACH weather_group GENERATE group AS weather, COUNT(clean) AS accident_count;
+STORE weather_count INTO 'output/weather_summary' USING PigStorage(',');
+location_group = GROUP clean BY location;
+location_count = FOREACH location_group GENERATE group AS location, COUNT(clean) AS accident_count;
+STORE location_count INTO 'output/location_summary' USING PigStorage(',');
+road_group = GROUP clean BY road;
+road_count = FOREACH road_group GENERATE group AS road_condition, COUNT(clean) AS accident_count;
+STORE road_count INTO 'output/road_summary' USING PigStorage(',');`;
+let a=document.createElement("a");a.href=URL.createObjectURL(new Blob([pig],{type:"text/plain"}));a.download="traffic_accident.pig";a.click()
+}
+update();
+</script>
+</body>
+</html>
