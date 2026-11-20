@@ -1,0 +1,14 @@
+{
+  "name": "Traffic Accident Analytics Using Apache Pig",
+  "description": "A Vite-based dashboard and Apache Pig scripts for exploring traffic accident data.",
+  "version": "1.0.0",
+  "dataset": "data/traffic_accidents.csv",
+  "technology": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Vite",
+    "Apache Pig",
+    "Hadoop"
+  ]
+}

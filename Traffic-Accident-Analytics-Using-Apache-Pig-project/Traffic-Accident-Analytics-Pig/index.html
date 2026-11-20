@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Traffic accident analytics dashboard using a sample dataset and Apache Pig analysis." />
+    <title>Traffic Accident Analytics</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">🚦</div>
+        <div><h1>Traffic Accident Analytics</h1><p class="subtitle">Explore accident patterns, severity and road safety indicators</p></div>
+      </div>
+      <div class="top-actions"><span class="status">● Dataset loaded locally</span><button class="primary" id="exportButton">Export filtered CSV ↓</button></div>
+    </header>
+    <main>
+      <div id="loadingState">Loading traffic accident dataset…</div>
+      <div id="dashboard" hidden>
+        <div class="section-head"><div><h2>Dashboard overview</h2><p class="muted">Use the filters to explore the sample accident records.</p></div></div>
+        <section class="filters" aria-label="Dashboard filters">
+          <div class="filter"><label for="cityFilter">City</label><select id="cityFilter"><option>All</option></select></div>
+          <div class="filter"><label for="severityFilter">Severity</label><select id="severityFilter"><option>All</option><option>Minor</option><option>Moderate</option><option>Major</option><option>Fatal</option></select></div>
+          <div class="filter"><label for="monthFilter">Month</label><select id="monthFilter"><option value="All">All months</option></select></div>
+          <button class="secondary" id="resetFilters">Reset filters ↺</button>
+        </section>
+        <section class="metrics">
+          <article class="metric"><span class="metric-icon">🚗</span><div class="metric-label">Total accidents</div><div class="metric-value" id="totalAccidents">0</div><div class="metric-note">Matching records</div></article>
+          <article class="metric"><span class="metric-icon">🩹</span><div class="metric-label">Total casualties</div><div class="metric-value" id="totalCasualties">0</div><div class="metric-note">People reported injured / affected</div></article>
+          <article class="metric"><span class="metric-icon">🕯️</span><div class="metric-label">Total fatalities</div><div class="metric-value" id="totalFatalities">0</div><div class="metric-note">Reported deaths</div></article>
+          <article class="metric"><span class="metric-icon">⚠️</span><div class="metric-label">Major + fatal</div><div class="metric-value" id="severeAccidents">0</div><div class="metric-note">High-severity accidents</div></article>
+        </section>
+        <section class="charts">
+          <article class="panel"><h2>Accidents by severity</h2><div id="severityChart"></div></article>
+          <article class="panel"><h2>Top cities by accidents</h2><div id="cityChart"></div></article>
+          <article class="panel"><h2>Accidents by weather</h2><div id="weatherChart"></div></article>
+          <article class="panel"><h2>About this analysis</h2><p class="muted">The charts and summary cards update together when a filter changes. Use the export button to download only the records currently shown. Apache Pig scripts for batch analysis are included in the <code>pig</code> folder.</p></article>
+        </section>
+        <section class="panel table-panel">
+          <div class="table-header"><h2>Accident records</h2><span id="recordCount">0 records</span></div>
+          <div class="table-wrap"><table><thead><tr><th>Accident ID</th><th>Date</th><th>Time</th><th>City</th><th>Vehicle</th><th>Severity</th><th>Casualties</th><th>Fatalities</th><th>Cause</th></tr></thead><tbody id="accidentRows"></tbody></table></div>
+        </section>
+      </div>
+      <footer>Traffic Accident Analytics • Academic demonstration project • Sample data only</footer>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

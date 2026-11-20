@@ -1,0 +1,151 @@
+accident_id,date,time,city,weather,road_condition,vehicle_type,severity,casualties,fatalities,cause
+ACC0001,2025-12-09,07:14,Tirupati,Clear,Dry,Auto,Moderate,1,0,Poor Road Condition
+ACC0002,2025-04-08,16:38,Kadapa,Rainy,Under Construction,Motorcycle,Minor,1,0,Poor Road Condition
+ACC0003,2025-03-23,13:21,Anantapur,Rainy,Wet,Truck,Moderate,1,0,Overspeeding
+ACC0004,2025-06-28,11:38,Anantapur,Clear,Under Construction,Auto,Minor,1,0,Overspeeding
+ACC0005,2025-05-27,20:39,Kurnool,Rainy,Dry,Car,Fatal,4,1,Bad Weather
+ACC0006,2025-02-28,07:55,Madanapalle,Cloudy,Potholes,Bus,Minor,2,0,Bad Weather
+ACC0007,2025-06-12,06:42,Anantapur,Clear,Wet,Auto,Major,2,0,Bad Weather
+ACC0008,2025-07-09,20:44,Chittoor,Foggy,Dry,Motorcycle,Minor,2,0,Overspeeding
+ACC0009,2025-05-03,06:58,Kurnool,Rainy,Under Construction,Bus,Major,4,0,Bad Weather
+ACC0010,2025-03-08,23:35,Anantapur,Cloudy,Under Construction,Truck,Moderate,2,0,Distracted Driving
+ACC0011,2025-02-25,01:55,Madanapalle,Rainy,Wet,Bicycle,Fatal,2,1,Poor Road Condition
+ACC0012,2025-07-20,14:33,Anantapur,Clear,Dry,Bicycle,Moderate,2,0,Signal Violation
+ACC0013,2025-06-04,09:27,Tirupati,Cloudy,Dry,Bicycle,Major,6,0,Bad Weather
+ACC0014,2025-03-17,03:55,Anantapur,Rainy,Wet,Truck,Minor,3,0,Distracted Driving
+ACC0015,2025-01-20,10:31,Kadapa,Clear,Potholes,Truck,Moderate,3,0,Distracted Driving
+ACC0016,2025-02-03,23:31,Madanapalle,Rainy,Wet,Bicycle,Minor,3,0,Poor Road Condition
+ACC0017,2025-10-14,06:59,Chittoor,Foggy,Under Construction,Bicycle,Fatal,2,1,Bad Weather
+ACC0018,2025-08-04,07:14,Madanapalle,Foggy,Dry,Auto,Minor,3,0,Signal Violation
+ACC0019,2025-01-03,22:40,Kadapa,Rainy,Dry,Car,Minor,1,0,Drunk Driving
+ACC0020,2025-05-22,15:13,Tirupati,Cloudy,Wet,Bus,Minor,1,0,Poor Road Condition
+ACC0021,2025-11-14,11:27,Nellore,Cloudy,Dry,Bicycle,Minor,1,0,Bad Weather
+ACC0022,2025-12-11,03:15,Chittoor,Rainy,Under Construction,Motorcycle,Fatal,1,1,Poor Road Condition
+ACC0023,2025-04-28,02:28,Madanapalle,Clear,Dry,Car,Minor,2,0,Distracted Driving
+ACC0024,2025-08-07,12:57,Kadapa,Rainy,Under Construction,Car,Minor,2,0,Poor Road Condition
+ACC0025,2025-05-14,22:46,Vijayawada,Rainy,Wet,Truck,Minor,2,0,Distracted Driving
+ACC0026,2025-01-24,10:03,Kadapa,Cloudy,Wet,Car,Fatal,5,1,Signal Violation
+ACC0027,2025-02-20,02:43,Chittoor,Cloudy,Dry,Auto,Minor,1,0,Distracted Driving
+ACC0028,2025-10-03,13:42,Kurnool,Foggy,Wet,Bicycle,Moderate,1,0,Bad Weather
+ACC0029,2025-07-05,21:41,Anantapur,Cloudy,Potholes,Car,Minor,2,0,Overspeeding
+ACC0030,2025-02-03,17:13,Anantapur,Rainy,Potholes,Car,Moderate,3,0,Distracted Driving
+ACC0031,2025-08-27,17:45,Anantapur,Clear,Potholes,Bicycle,Minor,1,0,Overspeeding
+ACC0032,2025-02-24,17:09,Anantapur,Foggy,Wet,Bicycle,Fatal,2,1,Drunk Driving
+ACC0033,2025-05-17,15:16,Kadapa,Clear,Under Construction,Truck,Minor,3,0,Overspeeding
+ACC0034,2025-11-09,05:47,Vijayawada,Cloudy,Dry,Car,Minor,1,0,Overspeeding
+ACC0035,2025-09-02,11:37,Tirupati,Cloudy,Wet,Car,Fatal,6,0,Drunk Driving
+ACC0036,2025-06-07,21:15,Madanapalle,Foggy,Under Construction,Auto,Minor,1,0,Bad Weather
+ACC0037,2025-03-26,05:56,Nellore,Clear,Wet,Bicycle,Minor,1,0,Drunk Driving
+ACC0038,2025-11-28,23:51,Chittoor,Foggy,Wet,Bicycle,Major,4,0,Overspeeding
+ACC0039,2025-08-08,06:52,Vijayawada,Foggy,Potholes,Motorcycle,Moderate,1,0,Distracted Driving
+ACC0040,2025-07-11,08:55,Madanapalle,Foggy,Potholes,Bicycle,Minor,1,0,Signal Violation
+ACC0041,2025-06-01,03:56,Anantapur,Rainy,Potholes,Car,Moderate,3,0,Overspeeding
+ACC0042,2025-12-26,10:27,Madanapalle,Cloudy,Wet,Truck,Moderate,2,0,Overspeeding
+ACC0043,2025-09-26,17:43,Chittoor,Foggy,Under Construction,Car,Moderate,1,0,Bad Weather
+ACC0044,2025-02-24,09:32,Anantapur,Cloudy,Potholes,Bus,Fatal,5,1,Bad Weather
+ACC0045,2025-04-14,21:24,Tirupati,Foggy,Under Construction,Auto,Minor,1,0,Overspeeding
+ACC0046,2025-07-26,18:38,Kurnool,Cloudy,Under Construction,Bus,Minor,1,0,Bad Weather
+ACC0047,2025-12-06,21:05,Anantapur,Foggy,Dry,Motorcycle,Minor,2,0,Bad Weather
+ACC0048,2025-03-01,01:15,Vijayawada,Clear,Under Construction,Bus,Minor,1,0,Bad Weather
+ACC0049,2025-12-13,15:25,Chittoor,Rainy,Dry,Car,Moderate,3,0,Poor Road Condition
+ACC0050,2025-09-15,01:35,Chittoor,Clear,Under Construction,Motorcycle,Minor,3,0,Poor Road Condition
+ACC0051,2025-10-11,14:39,Nellore,Cloudy,Wet,Bicycle,Moderate,3,0,Poor Road Condition
+ACC0052,2025-11-09,16:31,Chittoor,Foggy,Under Construction,Car,Moderate,1,0,Bad Weather
+ACC0053,2025-06-11,17:05,Tirupati,Rainy,Wet,Bus,Minor,2,0,Bad Weather
+ACC0054,2025-02-14,13:21,Vijayawada,Cloudy,Dry,Motorcycle,Minor,1,0,Poor Road Condition
+ACC0055,2025-12-01,18:24,Vijayawada,Clear,Potholes,Truck,Moderate,3,0,Poor Road Condition
+ACC0056,2025-09-24,23:34,Chittoor,Cloudy,Wet,Truck,Major,4,0,Poor Road Condition
+ACC0057,2025-06-22,21:51,Nellore,Rainy,Under Construction,Motorcycle,Moderate,2,0,Signal Violation
+ACC0058,2025-10-19,21:01,Madanapalle,Cloudy,Wet,Bus,Moderate,2,0,Distracted Driving
+ACC0059,2025-06-07,14:20,Kurnool,Cloudy,Potholes,Bus,Minor,2,0,Drunk Driving
+ACC0060,2025-01-24,17:03,Kurnool,Rainy,Dry,Bicycle,Major,4,0,Overspeeding
+ACC0061,2025-04-27,00:39,Tirupati,Rainy,Wet,Bus,Major,2,0,Bad Weather
+ACC0062,2025-08-23,08:49,Kurnool,Rainy,Dry,Motorcycle,Minor,1,0,Drunk Driving
+ACC0063,2025-05-19,21:58,Nellore,Cloudy,Wet,Car,Minor,1,0,Signal Violation
+ACC0064,2025-04-04,22:49,Anantapur,Clear,Dry,Truck,Moderate,3,0,Signal Violation
+ACC0065,2025-02-17,20:21,Kadapa,Cloudy,Under Construction,Car,Moderate,2,0,Poor Road Condition
+ACC0066,2025-08-23,04:27,Tirupati,Foggy,Under Construction,Bus,Fatal,6,0,Poor Road Condition
+ACC0067,2025-05-11,07:53,Madanapalle,Foggy,Under Construction,Motorcycle,Major,5,0,Poor Road Condition
+ACC0068,2025-07-11,00:31,Kurnool,Rainy,Under Construction,Motorcycle,Moderate,3,0,Drunk Driving
+ACC0069,2025-05-20,22:56,Anantapur,Clear,Wet,Car,Major,3,0,Distracted Driving
+ACC0070,2025-09-25,07:44,Vijayawada,Cloudy,Under Construction,Car,Major,4,0,Overspeeding
+ACC0071,2025-12-08,09:42,Kurnool,Cloudy,Potholes,Bus,Minor,2,0,Bad Weather
+ACC0072,2025-12-15,08:19,Anantapur,Rainy,Dry,Bicycle,Moderate,2,0,Distracted Driving
+ACC0073,2025-09-25,22:11,Chittoor,Rainy,Under Construction,Truck,Minor,3,0,Bad Weather
+ACC0074,2025-10-10,03:53,Chittoor,Foggy,Wet,Truck,Moderate,3,0,Distracted Driving
+ACC0075,2025-09-05,08:02,Kadapa,Foggy,Wet,Bicycle,Minor,3,0,Poor Road Condition
+ACC0076,2025-10-10,15:30,Vijayawada,Foggy,Wet,Car,Minor,1,0,Drunk Driving
+ACC0077,2025-02-13,15:04,Kadapa,Rainy,Wet,Auto,Fatal,4,1,Drunk Driving
+ACC0078,2025-02-18,13:38,Chittoor,Cloudy,Under Construction,Bus,Minor,1,0,Drunk Driving
+ACC0079,2025-05-19,19:03,Madanapalle,Rainy,Wet,Truck,Major,4,0,Bad Weather
+ACC0080,2025-03-18,02:10,Kadapa,Cloudy,Under Construction,Bicycle,Minor,1,0,Signal Violation
+ACC0081,2025-04-10,22:18,Vijayawada,Clear,Wet,Truck,Moderate,1,0,Bad Weather
+ACC0082,2025-07-04,17:14,Tirupati,Foggy,Wet,Car,Moderate,1,0,Overspeeding
+ACC0083,2025-10-24,18:58,Anantapur,Cloudy,Dry,Bus,Minor,2,0,Bad Weather
+ACC0084,2025-05-17,17:31,Vijayawada,Clear,Dry,Bus,Minor,2,0,Bad Weather
+ACC0085,2025-01-03,07:43,Kadapa,Foggy,Dry,Motorcycle,Minor,2,0,Poor Road Condition
+ACC0086,2025-05-06,18:27,Vijayawada,Clear,Under Construction,Truck,Moderate,2,0,Poor Road Condition
+ACC0087,2025-02-28,05:21,Nellore,Cloudy,Potholes,Bicycle,Minor,3,0,Poor Road Condition
+ACC0088,2025-01-15,02:20,Anantapur,Foggy,Dry,Bus,Major,5,0,Signal Violation
+ACC0089,2025-11-28,17:29,Nellore,Clear,Wet,Auto,Major,1,0,Drunk Driving
+ACC0090,2025-11-15,01:13,Anantapur,Rainy,Potholes,Bus,Moderate,2,0,Bad Weather
+ACC0091,2025-11-20,07:45,Tirupati,Foggy,Dry,Auto,Moderate,1,0,Poor Road Condition
+ACC0092,2025-08-04,20:53,Tirupati,Cloudy,Potholes,Auto,Minor,1,0,Bad Weather
+ACC0093,2025-08-08,14:35,Tirupati,Cloudy,Wet,Auto,Minor,2,0,Signal Violation
+ACC0094,2025-02-09,13:21,Anantapur,Clear,Potholes,Bicycle,Major,2,0,Drunk Driving
+ACC0095,2025-11-16,04:28,Vijayawada,Foggy,Potholes,Auto,Major,5,0,Signal Violation
+ACC0096,2025-04-23,07:36,Nellore,Rainy,Under Construction,Car,Minor,2,0,Drunk Driving
+ACC0097,2025-07-13,21:50,Tirupati,Cloudy,Dry,Motorcycle,Major,6,0,Signal Violation
+ACC0098,2025-08-04,16:58,Vijayawada,Clear,Wet,Bus,Fatal,3,0,Bad Weather
+ACC0099,2025-05-11,19:44,Nellore,Clear,Potholes,Bicycle,Fatal,1,1,Signal Violation
+ACC0100,2025-11-23,15:55,Kadapa,Clear,Wet,Bicycle,Moderate,2,0,Bad Weather
+ACC0101,2025-07-04,20:45,Madanapalle,Cloudy,Wet,Bicycle,Fatal,2,1,Drunk Driving
+ACC0102,2025-06-26,01:18,Kurnool,Foggy,Under Construction,Motorcycle,Major,1,0,Distracted Driving
+ACC0103,2025-11-26,05:10,Tirupati,Clear,Under Construction,Auto,Moderate,3,0,Bad Weather
+ACC0104,2025-03-08,14:40,Anantapur,Cloudy,Potholes,Bicycle,Minor,3,0,Overspeeding
+ACC0105,2025-05-22,17:10,Madanapalle,Cloudy,Potholes,Auto,Major,4,0,Drunk Driving
+ACC0106,2025-12-09,14:54,Anantapur,Rainy,Under Construction,Bus,Moderate,2,0,Overspeeding
+ACC0107,2025-06-19,09:44,Anantapur,Clear,Under Construction,Truck,Minor,3,0,Overspeeding
+ACC0108,2025-12-02,19:47,Vijayawada,Foggy,Wet,Auto,Moderate,3,0,Drunk Driving
+ACC0109,2025-10-09,21:48,Tirupati,Clear,Dry,Truck,Minor,1,0,Poor Road Condition
+ACC0110,2025-12-05,02:58,Anantapur,Foggy,Under Construction,Motorcycle,Minor,2,0,Distracted Driving
+ACC0111,2025-06-17,16:58,Anantapur,Rainy,Potholes,Bus,Minor,3,0,Drunk Driving
+ACC0112,2025-02-15,02:09,Chittoor,Cloudy,Potholes,Car,Major,3,0,Poor Road Condition
+ACC0113,2025-02-15,11:43,Anantapur,Cloudy,Potholes,Car,Minor,3,0,Bad Weather
+ACC0114,2025-10-18,10:58,Chittoor,Clear,Under Construction,Bicycle,Minor,1,0,Drunk Driving
+ACC0115,2025-03-02,01:19,Vijayawada,Clear,Dry,Motorcycle,Moderate,1,0,Signal Violation
+ACC0116,2025-06-22,23:44,Nellore,Rainy,Under Construction,Bicycle,Minor,2,0,Overspeeding
+ACC0117,2025-07-09,01:44,Kurnool,Rainy,Under Construction,Bus,Major,5,0,Distracted Driving
+ACC0118,2025-11-12,17:57,Kurnool,Clear,Under Construction,Truck,Major,1,0,Distracted Driving
+ACC0119,2025-04-21,20:38,Kadapa,Clear,Potholes,Motorcycle,Fatal,4,1,Distracted Driving
+ACC0120,2025-02-27,17:13,Chittoor,Rainy,Potholes,Motorcycle,Major,2,0,Signal Violation
+ACC0121,2025-03-18,08:51,Tirupati,Clear,Dry,Motorcycle,Minor,1,0,Overspeeding
+ACC0122,2025-10-11,00:11,Anantapur,Clear,Wet,Bicycle,Minor,1,0,Poor Road Condition
+ACC0123,2025-02-16,14:49,Kurnool,Clear,Under Construction,Auto,Moderate,3,0,Distracted Driving
+ACC0124,2025-11-17,09:29,Kadapa,Clear,Under Construction,Bus,Fatal,1,1,Poor Road Condition
+ACC0125,2025-12-15,02:57,Madanapalle,Foggy,Wet,Car,Moderate,2,0,Distracted Driving
+ACC0126,2025-10-18,22:20,Nellore,Foggy,Under Construction,Auto,Minor,3,0,Signal Violation
+ACC0127,2025-02-28,20:41,Chittoor,Cloudy,Under Construction,Motorcycle,Moderate,3,0,Poor Road Condition
+ACC0128,2025-07-14,23:06,Kurnool,Cloudy,Potholes,Bicycle,Minor,2,0,Drunk Driving
+ACC0129,2025-11-16,02:05,Madanapalle,Clear,Under Construction,Car,Minor,1,0,Bad Weather
+ACC0130,2025-09-02,18:35,Kurnool,Clear,Under Construction,Truck,Major,2,0,Bad Weather
+ACC0131,2025-12-02,09:38,Anantapur,Foggy,Dry,Auto,Fatal,4,0,Signal Violation
+ACC0132,2025-08-08,03:22,Kurnool,Clear,Potholes,Auto,Minor,3,0,Distracted Driving
+ACC0133,2025-10-20,21:41,Kadapa,Foggy,Dry,Motorcycle,Major,5,0,Drunk Driving
+ACC0134,2025-06-12,00:11,Tirupati,Cloudy,Dry,Motorcycle,Moderate,2,0,Bad Weather
+ACC0135,2025-02-24,16:13,Nellore,Cloudy,Under Construction,Truck,Moderate,1,0,Distracted Driving
+ACC0136,2025-06-25,18:38,Madanapalle,Clear,Wet,Motorcycle,Minor,3,0,Signal Violation
+ACC0137,2025-05-15,21:27,Vijayawada,Cloudy,Under Construction,Truck,Minor,1,0,Distracted Driving
+ACC0138,2025-06-14,03:18,Vijayawada,Foggy,Dry,Motorcycle,Major,1,0,Poor Road Condition
+ACC0139,2025-05-07,04:48,Anantapur,Foggy,Potholes,Car,Fatal,1,1,Overspeeding
+ACC0140,2025-03-05,12:34,Chittoor,Foggy,Dry,Bus,Moderate,2,0,Bad Weather
+ACC0141,2025-08-03,10:36,Nellore,Cloudy,Under Construction,Truck,Minor,1,0,Overspeeding
+ACC0142,2025-03-26,19:29,Kurnool,Clear,Under Construction,Car,Moderate,2,0,Distracted Driving
+ACC0143,2025-09-03,12:55,Anantapur,Foggy,Wet,Truck,Moderate,2,0,Distracted Driving
+ACC0144,2025-02-17,16:12,Kurnool,Foggy,Wet,Motorcycle,Minor,3,0,Overspeeding
+ACC0145,2025-03-20,04:48,Madanapalle,Rainy,Under Construction,Bus,Minor,1,0,Signal Violation
+ACC0146,2025-11-19,20:40,Kurnool,Foggy,Wet,Bus,Major,4,0,Overspeeding
+ACC0147,2025-05-26,08:37,Kadapa,Foggy,Dry,Truck,Moderate,3,0,Poor Road Condition
+ACC0148,2025-06-27,09:04,Madanapalle,Cloudy,Under Construction,Auto,Moderate,1,0,Signal Violation
+ACC0149,2025-08-26,18:41,Chittoor,Foggy,Under Construction,Auto,Fatal,6,0,Distracted Driving
+ACC0150,2025-06-23,02:32,Tirupati,Clear,Wet,Bicycle,Fatal,4,1,Poor Road Condition
